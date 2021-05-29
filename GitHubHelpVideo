@@ -1,1 +1,20 @@
 https://www.youtube.com/watch?v=CCjGyOAtZtc
+
+
+7
+
+VS 2017 Git Local Commit DB.lock error on every commit
+
+This issue must have been caused by a corrupt .ignore file.
+
+If your IDE is Visual Studio please follow these steps to resolve this issue:
+
+Delete the .gitignore file from your project folder
+Go to Team Explorer
+Go to Home in Team Explorer
+Go to Settings
+Under GIT, Click Repository Settings
+Under - Ignore & Attributes Files - Under Ignore File - Click Add. You should see a notification that the Ignore File has been successfully created
+Build your solution. It will take a little while and create a new .ignore file once build is successful
+You should now be able to Commit and Push without any further issue
+NB: Bear in mind that your version of visual studio might place these options differently. I am using Visual Studio 2019 Community Edition.
